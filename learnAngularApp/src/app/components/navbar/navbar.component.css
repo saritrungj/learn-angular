@@ -1,0 +1,58 @@
+
+
+* {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.logo h1 {
+    animation-name: line-color;
+    animation-duration: 1.25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes line-color {
+    0% {
+        color: orange;
+    }
+
+    50% {
+        color: limegreen;
+    }
+
+    100% {
+        color: orangered;
+    }
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.link-item a {
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color .15s;
+}
+
+.link-item a:hover {
+    color: orange;
+}
