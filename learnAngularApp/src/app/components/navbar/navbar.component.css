@@ -1,5 +1,4 @@
-
-
+ 
 * {
     text-decoration: none;
     list-style: none;
@@ -13,6 +12,7 @@ nav {
     background-color: black;
     padding: .5rem 1rem;
     border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
 .logo {

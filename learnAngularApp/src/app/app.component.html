@@ -1,5 +1,48 @@
 <div class="container">
 	<app-navbar></app-navbar>
-	<h1>{{title}}</h1>
 	<app-header></app-header>
+	<h1>{{title}}</h1>
+	<p>{{2+1}}</p>
+	<img [src]="imgUrl"
+		alt
+		width="75%">
+	<br>
+	<button disabled="{{isDisabled}}">
+		Disabled Using String Interpolation
+	</button>
+	<button [disabled]="isDisabled">
+		Disabled Using Property Binding
+	</button>
+	<br>
+
+
+
+	<!-- Class Binding -->
+	<button [class.active]="isActive"
+		[class.no-active]="!isActive"
+		[class.active-border]="isActive"
+		[class.no-active-border]="!isActive">
+		Click me
+	</button>
+	<br>
+	<button [class.apple]="fruitName==='Apple'"
+		[class.orange]="fruitName==='Orange'">
+		Fruit Ninja
+	</button>
+	<br>
+	<!-- styling binding -->
+	 <button [style.background]="isActive ? 'red' : 'blue'"
+	 [style.border]="isActive ? '6px solid black' : ''"	 
+	 (click)="isActive=!isActive"
+	 >
+	 Click</button>
+	<br>
+	 <button [class.active]="isActive">Class Binding</button>
+	 <br>
+	 <!-- Event Binding -->
+	<button (click)="buttonclick()">Event Binding</button>
+	<br>
+	<input type="text" (keyup)="keyEnter($event)">
+	<input type="text" (keyup.enter)="keyupFiltering()">
+
 </div>
