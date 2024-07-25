@@ -42,7 +42,16 @@
 	 <!-- Event Binding -->
 	<button (click)="buttonclick()">Event Binding</button>
 	<br>
-	<input type="text" (keyup)="keyEnter($event)">
-	<input type="text" (keyup.enter)="keyupFiltering()">
+	<!-- <input type="text" (keyup)="keyEnter($event)"> -->
+	<!-- <input type="text" (keyup.enter)="keyupFiltering(user)" #user id="userInput"> -->
+	<!-- <input type="text" [value]="userName" #username (keyup.enter)="updateUserName(username)"> -->
+	<br>
+	<input type="text" [(ngModel)]="userName">
+	<h3>{{userName}}</h3>
+
+	<!-- One way data binding and two way -->
+	 <input type="text" [value]="textValue" (keyup.enter)="onKeyup()">
+	 <br>
+	 <input type="text" [(ngModel)]="textValue" (keyup.enter)="onKeyup()">
 
 </div>
